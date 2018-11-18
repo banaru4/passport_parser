@@ -7,7 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Camera } from '@ionic-native/camera/ngx';
-
+import { CameraPreview } from '@ionic-native/camera-preview/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { AngularCropperjsModule } from 'angular-cropperjs';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,13 +17,16 @@ import { Camera } from '@ionic-native/camera/ngx';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularCropperjsModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Camera,
+    CameraPreview,
+    NativeStorage
   ],
   bootstrap: [AppComponent]
 })

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'camera',
     pathMatch: 'full'
   },
   {
@@ -14,6 +14,9 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
+  },
+  { path: 'camera',
+    loadChildren: './camera/camera.module#CameraPageModule'
   }
 ];
 
